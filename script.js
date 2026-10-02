@@ -91,8 +91,8 @@ function restartGoodbyeAnimation() {
 function getWhatsAppUrl(answer) {
   const messages = CONFIG.romanticMessage
     ? {
-        yes: "Sim! Eu aceito o convite ❤️ Até amanhã!",
-        no: "Obrigada pelo convite, mas dessa vez vou passar. ❤️"
+        yes: "Sim! Eu aceito o convite. Até amanhã, com carinho!",
+        no: "Obrigada pelo convite, mas dessa vez vou passar. Um abraço!"
       }
     : {
         yes: "Sim! Eu aceito o convite. Até amanhã!",
