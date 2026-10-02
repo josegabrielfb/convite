@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0f1014">
+    <meta name="description" content="Um pequeno sonho, um convite de verdade.">
+    <title>Um convite para amanhã</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true">
+      <div class="ambient__moon"></div>
+      <div class="ambient__stars" id="stars"></div>
+      <div class="ambient__glow"></div>
+    </div>
+
+    <main class="experience" id="experience">
+      <div class="progress" role="progressbar" aria-label="Progresso da história" aria-valuemin="1" aria-valuemax="13" aria-valuenow="1">
+        <span class="progress__fill"></span>
+      </div>
+
+      <section class="scene scene--dream is-active" id="dream" data-scene="dream" aria-labelledby="dream-title">
+        <div class="scene__content scene__content--intro">
+          <p class="eyebrow" data-enter data-delay="300">uma história pequena, antes de dormir</p>
+          <h1 id="dream-title" tabindex="-1" data-enter data-delay="900">Você já teve um sonho<br>que parecia real?</h1>
+          <p class="lede" data-enter data-delay="2300">Então sonha comigo por alguns minutos.</p>
+          <button class="button button--gold" type="button" data-next="night" data-enter data-delay="3400">Entrar no sonho <span aria-hidden="true">✦</span></button>
+        </div>
+        <p class="scene__aside" data-enter data-delay="1800">respira fundo</p>
+      </section>
+
+      <section class="scene scene--night" id="night" data-scene="night" aria-labelledby="night-title" hidden>
+        <div class="landscape" aria-hidden="true">
+          <div class="landscape__moon"></div>
+          <div class="landscape__cloud landscape__cloud--one"></div>
+          <div class="landscape__cloud landscape__cloud--two"></div>
+          <div class="landscape__hill landscape__hill--back"></div>
+          <div class="landscape__hill landscape__hill--front"></div>
+          <div class="landscape__road"><i></i><i></i><i></i></div>
+          <span class="landscape__light landscape__light--one"></span>
+          <span class="landscape__light landscape__light--two"></span>
+          <span class="landscape__light landscape__light--three"></span>
+        </div>
+        <div class="scene__content scene__content--landscape">
+          <p class="eyebrow" data-enter data-delay="300">capítulo um</p>
+          <h2 id="night-title" tabindex="-1" data-enter data-delay="800">Era uma noite qualquer...</h2>
+          <p class="lede" data-enter data-delay="1900">...até que alguém decidiu fazer um convite.</p>
+          <button class="button button--quiet" type="button" data-next="car" data-enter data-delay="2900">E então? <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene scene--road" id="car" data-scene="car" aria-labelledby="car-title" hidden>
+        <div class="road-scene" aria-hidden="true">
+          <div class="city-skyline">
+            <span class="skyline__tower skyline__tower--one"></span><span class="skyline__tower skyline__tower--two"></span>
+            <span class="skyline__tower skyline__tower--three"></span><span class="skyline__tower skyline__tower--four"></span>
+            <span class="skyline__label" data-start-city>Joinville</span>
+          </div>
+          <div class="road-scene__horizon"></div>
+          <div class="road-scene__road"><span></span><span></span><span></span><span></span></div>
+          <div class="road-scene__dust"><i></i><i></i><i></i><i></i><i></i></div>
+          <svg class="car-illustration" viewBox="0 0 160 132" role="img" aria-label="Carro visto de frente seguindo pela estrada">
+            <ellipse cx="80" cy="120" rx="57" ry="7" fill="#08090a" opacity=".48"/>
+            <path d="M38 76 45 53q2-8 11-12l7-16q3-7 11-7h12q8 0 11 7l7 16q9 4 11 12l7 23v23q0 8-8 8H46q-8 0-8-8Z" fill="#8f3040" stroke="#e1bd82" stroke-width="3"/>
+            <path d="m64 27-8 21h48l-8-21q-1-3-5-3H69q-4 0-5 3Z" fill="#26343a" stroke="#c9a86a" stroke-width="2"/>
+            <path d="m57 53-5 22h56l-5-22Z" fill="#9c4850" stroke="#c9a86a" stroke-width="1.5"/>
+            <path d="M46 57 34 62l4 9h10m68-14 12 5-4 9h-10" fill="#8f3040" stroke="#e1bd82" stroke-width="2"/>
+            <path d="M40 81h17l-2 14H40q-4 0-4-4v-6q0-4 4-4Zm63 0h17q4 0 4 4v6q0 4-4 4h-15Z" fill="#f1d38b" stroke="#fff0c9" stroke-width="2"/>
+            <rect x="68" y="82" width="24" height="12" rx="3" fill="#3b2929" stroke="#c9a86a" stroke-width="1.5"/>
+            <path d="M47 103h66" stroke="#f5f0e6" stroke-width="3" opacity=".55"/>
+            <path d="M39 88h-7v19q0 5 5 5h8m76-24h7v19q0 5-5 5h-8" fill="#17171a" stroke="#e8ddc4" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="scene__content scene__content--road">
+          <p class="eyebrow" data-enter data-delay="250">ponto de partida</p>
+          <h2 id="car-title" class="road-caption road-caption--start" tabindex="-1" data-enter data-delay="600">Saindo de <span data-start-city>Joinville</span>...</h2>
+          <p class="lede road-caption road-caption--destination" data-enter data-delay="4400">Destino: sua casa.</p>
+          <button class="button button--quiet" type="button" data-next="arrival" data-enter data-delay="5600">Cheguei à sua casa <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+      <section class="scene scene--arrival" id="arrival" data-scene="arrival" aria-labelledby="arrival-title" hidden>
+        <div class="arrival-illustration" aria-hidden="true">
+          <span class="arrival-skyline"></span>
+          <svg class="arrival-car" viewBox="0 0 260 126" role="img" aria-label="Carro vinho estacionado à noite">
+            <ellipse cx="130" cy="111" rx="112" ry="9" fill="#08090a" opacity=".5"/>
+            <path d="M20 77 35 62q5-5 15-7l31-5 23-29q5-7 15-7h49q13 0 20 11l20 28 25 7q9 2 10 11v20H18V81q0-3 2-4Z" fill="#873746" stroke="#d2ae70" stroke-width="3"/>
+            <path d="m87 51 20-28q3-4 10-4h20v32Zm56-32h25q8 0 13 8l17 24h-55Z" fill="#25383d" stroke="#c9a86a" stroke-width="2"/>
+            <path d="M143 20v33m-55 0h124m-82 2v25m57-25v25" fill="none" stroke="#c9a86a" stroke-width="2" opacity=".72"/>
+            <path d="M22 77h14m201 0h16" stroke="#f4d998" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="66" cy="91" r="19" fill="#17191a" stroke="#e8ddc4" stroke-width="4"/>
+            <circle cx="66" cy="91" r="7" fill="#9a927e"/>
+            <circle cx="197" cy="91" r="19" fill="#17191a" stroke="#e8ddc4" stroke-width="4"/>
+            <circle cx="197" cy="91" r="7" fill="#9a927e"/>
+          </svg>
+          <div class="arrival-person"><i></i><b></b></div>
+          <span class="arrival-lamp arrival-lamp--one"></span>
+          <span class="arrival-lamp arrival-lamp--two"></span>
+        </div>
+        <div class="scene__content scene__content--arrival">
+          <p class="eyebrow" data-enter data-delay="250">cheguei</p>
+          <h2 id="arrival-title" tabindex="-1" data-enter data-delay="800">Já estou aqui.</h2>
+          <p class="lede" data-enter data-delay="1550">O carro estacionou. Desci. Agora é só você.</p>
+          <button class="button button--gold" type="button" data-next="getting-ready" data-enter data-delay="2300">Cheguei <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene scene--getting-ready" id="getting-ready" data-scene="getting-ready" aria-labelledby="getting-ready-title" hidden>
+        <div class="getting-ready-illustration" aria-hidden="true">
+          <div class="vanity-mirror"><span></span></div>
+          <div class="vanity-table"><i></i><b></b><span></span></div>
+          <div class="readying-person"><i></i><b></b><span></span></div>
+          <span class="getting-ready-light getting-ready-light--one"></span>
+          <span class="getting-ready-light getting-ready-light--two"></span>
+          <span class="getting-ready-light getting-ready-light--three"></span>
+        </div>
+        <div class="scene__content">
+          <p class="eyebrow" data-enter data-delay="250">do outro lado da porta</p>
+          <h2 id="getting-ready-title" tabindex="-1" data-enter data-delay="800">Você está se arrumando...</h2>
+          <p class="lede" data-enter data-delay="1500">E eu aqui tentando parecer tranquilo.</p>
+          <div class="ready-actions" data-enter data-delay="2200">
+            <button class="button button--gold" type="button" data-next="waiting">Já estou saindo <span aria-hidden="true">→</span></button>
+            <button class="button button--quiet" type="button" data-next="hello">Estou pronta <span aria-hidden="true">✦</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene--waiting" id="waiting" data-scene="waiting" aria-labelledby="waiting-title" hidden>
+        <div class="waiting-clock" aria-hidden="true"><i></i><b></b><span></span></div>
+        <div class="scene__content">
+          <p class="eyebrow" data-enter data-delay="150">sem pressa</p>
+          <h2 id="waiting-title" tabindex="-1" data-enter data-delay="550">Já estou saindo...</h2>
+          <p class="lede" data-enter data-delay="1050">Eu espero. Prometo não ficar olhando o relógio.</p>
+        </div>
+      </section>
+
+      <section class="scene scene--hello" id="hello" data-scene="hello" aria-labelledby="hello-title" hidden>
+        <div class="ready-reveal" aria-hidden="true">
+          <span class="ready-halo ready-halo--one"></span>
+          <span class="ready-halo ready-halo--two"></span>
+          <div class="ready-person"><i></i><b></b><span></span></div>
+          <span class="ready-spark ready-spark--one">✦</span>
+          <span class="ready-spark ready-spark--two">✧</span>
+          <span class="ready-spark ready-spark--three">✦</span>
+          <span class="ready-spark ready-spark--four">✧</span>
+          <div class="wow-speaker">
+            <div class="wow-cloud">UAU</div>
+            <span class="wow-speaker__person"><i></i><b></b></span>
+          </div>
+        </div>
+        <div class="scene__content">
+          <p class="eyebrow" data-enter data-delay="1250">a melhor parte do plano</p>
+          <h2 id="hello-title" tabindex="-1" data-enter data-delay="1650">E então você apareceu.</h2>
+          <p class="lede" data-enter data-delay="2350">Nossa... ela é linda.</p>
+          <button class="button button--quiet" type="button" data-next="outing" data-enter data-delay="3100">A noite continua <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene scene--outing" id="outing" data-scene="outing" aria-labelledby="outing-title" hidden>
+        <div class="scene__content">
+          <p class="eyebrow" data-enter data-delay="250">o nosso pequeno rolê</p>
+          <h2 id="outing-title" tabindex="-1" data-enter data-delay="700">E aí começou a noite.</h2>
+          <div class="clues" aria-label="Vinho, massa, brilho e música">
+            <span data-enter data-delay="1250" aria-hidden="true">🍷</span>
+            <span data-enter data-delay="1550" aria-hidden="true">🍝</span>
+            <span data-enter data-delay="1850" aria-hidden="true">✦</span>
+            <span data-enter data-delay="2150" aria-hidden="true">♫</span>
+          </div>
+          <h3 class="scene__subheading" data-enter data-delay="2500">Uma noite italiana.</h3>
+          <p class="supporting" data-enter data-delay="2900">Boa comida. Um bom vinho. Boa conversa.</p>
+          <button class="button button--quiet" type="button" data-next="adventure" data-enter data-delay="3600">Mas antes... <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene scene--adventure" id="adventure" data-scene="adventure" aria-labelledby="adventure-title" hidden>
+        <div class="suspense-scene" aria-hidden="true"><span class="suspense-scene__moon"></span><span class="suspense-scene__beam"></span><span class="suspense-scene__silhouette"></span><span class="suspense-scene__question">?</span></div>
+        <div class="adventure-mark" aria-hidden="true"><span>✦</span><i></i><b></b></div>
+        <div class="scene__content">
+          <p class="eyebrow" data-enter data-delay="250">um desvio no roteiro</p>
+          <h2 id="adventure-title" tabindex="-1" data-enter data-delay="850">Talvez uma pequena aventura.</h2>
+          <p class="lede" data-enter data-delay="1750">Estou pensando em uma surpresa antes do jantar.</p>
+          <p class="secret-note" data-enter data-delay="2450">Destino ainda em segredo.</p>
+          <button class="button button--gold" type="button" data-next="dinner" data-enter data-delay="3150">Continuar <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene scene--dinner" id="dinner" data-scene="dinner" aria-labelledby="dinner-title" hidden>
+        <div class="table-scene" aria-hidden="true">
+          <svg class="dinner-glass dinner-glass--left" viewBox="0 0 48 88">
+            <path d="M9 7h30l-3 23c-1 10-6 17-12 19-6-2-11-9-12-19L9 7Z" fill="#ead6b90c" stroke="#ead6b9" stroke-width="2"/>
+            <path d="M11 23h26l-1 8c-1 9-5 14-12 17-7-3-11-8-12-17l-1-8Z" fill="#8f3040c9"/>
+            <path d="M24 49v26m-10 4h20" fill="none" stroke="#ead6b9" stroke-width="2" stroke-linecap="round"/>
+            <path d="m14 12 2 14" stroke="#fff4dc" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+          </svg>
+          <svg class="dinner-glass dinner-glass--right" viewBox="0 0 48 88">
+            <path d="M9 7h30l-3 23c-1 10-6 17-12 19-6-2-11-9-12-19L9 7Z" fill="#ead6b90c" stroke="#ead6b9" stroke-width="2"/>
+            <path d="M11 23h26l-1 8c-1 9-5 14-12 17-7-3-11-8-12-17l-1-8Z" fill="#8f3040c9"/>
+            <path d="M24 49v26m-10 4h20" fill="none" stroke="#ead6b9" stroke-width="2" stroke-linecap="round"/>
+            <path d="m14 12 2 14" stroke="#fff4dc" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+          </svg>
+          <svg class="dinner-bottle" viewBox="0 0 64 132">
+            <path d="M25 5h14v22l7 9c4 5 6 10 6 17v62c0 6-4 10-10 10H22c-6 0-10-4-10-10V53c0-7 2-12 6-17l7-9V5Z" fill="#542b32" stroke="#c9a86a" stroke-width="2"/>
+            <path d="M25 6h14v15H25Z" fill="#b68a4d"/>
+            <path d="M20 48h24v34H20Z" rx="3" fill="#d9c49d" stroke="#eadbb9" stroke-width="1.5"/>
+            <path d="M25 57h14m-14 6h14" stroke="#8f3040" stroke-width="2" stroke-linecap="round"/>
+            <path d="M18 47v58" stroke="#a96762" stroke-width="2" opacity=".6"/>
+          </svg>
+          <svg class="dinner-candle" viewBox="0 0 44 84">
+            <path d="M22 5c-10 11-8 17 0 21 8-4 10-10 0-21Z" fill="#f7c768"/>
+            <path d="M22 10c-4 6-3 9 0 11 3-2 4-5 0-11Z" fill="#fff0b2"/>
+            <rect x="11" y="26" width="22" height="50" rx="3" fill="#e9dfc8"/>
+            <path d="M14 29v42" stroke="#fff8e8" stroke-width="2" opacity=".72"/>
+            <ellipse cx="22" cy="77" rx="13" ry="3" fill="#100d0c" opacity=".35"/>
+          </svg>
+          <svg class="dinner-plate dinner-plate--left" viewBox="0 0 180 120" aria-hidden="true">
+            <defs>
+              <linearGradient id="plate-left-glaze" x1="0" x2="0.9" y1="0" y2="1"><stop stop-color="#fff9eb"/><stop offset=".55" stop-color="#e8dfce"/><stop offset="1" stop-color="#b8a98e"/></linearGradient>
+              <radialGradient id="plate-left-sauce"><stop stop-color="#c36c45"/><stop offset="1" stop-color="#843c2d"/></radialGradient>
+              <clipPath id="plate-left-well"><ellipse cx="90" cy="55" rx="48" ry="19"/></clipPath>
+            </defs>
+            <ellipse cx="90" cy="67" rx="82" ry="44" fill="#140d09" opacity=".5"/>
+            <ellipse cx="90" cy="58" rx="81" ry="44" fill="url(#plate-left-glaze)" stroke="#fff8eb" stroke-width="2"/>
+            <ellipse cx="90" cy="56" rx="72" ry="37" fill="#e4dac7" stroke="#aa9b80" stroke-width="1.5"/>
+            <ellipse cx="90" cy="55" rx="63" ry="30" fill="#f5eee0" stroke="#fffaf0" stroke-width="2"/>
+            <ellipse cx="90" cy="55" rx="48" ry="19" fill="url(#plate-left-sauce)"/>
+            <g clip-path="url(#plate-left-well)" fill="none" stroke-linecap="round">
+              <path d="M48 55c9-17 23-18 32-9 8 8-5 16-14 10-8-5-1-15 10-13 15 2 17 19 31 13 11-5 17-13 31-5" stroke="#f3d795" stroke-width="4"/>
+              <path d="M49 62c12-13 22-12 28-5 7 8 20 8 27 0 8-9 19-9 31-1" stroke="#dfbd78" stroke-width="3"/>
+              <path d="M60 49c8 6 15 5 19-1m16 17c8 4 15 1 19-6" stroke="#fff0c5" stroke-width="2"/>
+            </g>
+            <path d="M111 47c7-9 16-8 17-2-5 7-11 8-17 2Z" fill="#56714a"/>
+            <path d="M116 45l8-3" stroke="#d1d9a0" stroke-width="1.5"/>
+            <circle cx="70" cy="57" r="2" fill="#e9bd6c"/><circle cx="103" cy="51" r="1.8" fill="#f0cf83"/>
+          </svg>
+          <svg class="dinner-plate dinner-plate--right" viewBox="0 0 180 120" aria-hidden="true">
+            <defs>
+              <linearGradient id="plate-right-glaze" x1="0" x2="0.9" y1="0" y2="1"><stop stop-color="#fff9eb"/><stop offset=".55" stop-color="#e8dfce"/><stop offset="1" stop-color="#b8a98e"/></linearGradient>
+              <radialGradient id="plate-right-sauce"><stop stop-color="#c36c45"/><stop offset="1" stop-color="#843c2d"/></radialGradient>
+              <clipPath id="plate-right-well"><ellipse cx="90" cy="55" rx="48" ry="19"/></clipPath>
+            </defs>
+            <ellipse cx="90" cy="67" rx="82" ry="44" fill="#140d09" opacity=".5"/>
+            <ellipse cx="90" cy="58" rx="81" ry="44" fill="url(#plate-right-glaze)" stroke="#fff8eb" stroke-width="2"/>
+            <ellipse cx="90" cy="56" rx="72" ry="37" fill="#e4dac7" stroke="#aa9b80" stroke-width="1.5"/>
+            <ellipse cx="90" cy="55" rx="63" ry="30" fill="#f5eee0" stroke="#fffaf0" stroke-width="2"/>
+            <ellipse cx="90" cy="55" rx="48" ry="19" fill="url(#plate-right-sauce)"/>
+            <g clip-path="url(#plate-right-well)" fill="none" stroke-linecap="round">
+              <path d="M48 55c9-17 23-18 32-9 8 8-5 16-14 10-8-5-1-15 10-13 15 2 17 19 31 13 11-5 17-13 31-5" stroke="#f3d795" stroke-width="4"/>
+              <path d="M49 62c12-13 22-12 28-5 7 8 20 8 27 0 8-9 19-9 31-1" stroke="#dfbd78" stroke-width="3"/>
+              <path d="M60 49c8 6 15 5 19-1m16 17c8 4 15 1 19-6" stroke="#fff0c5" stroke-width="2"/>
+            </g>
+            <path d="M111 47c7-9 16-8 17-2-5 7-11 8-17 2Z" fill="#56714a"/>
+            <path d="M116 45l8-3" stroke="#d1d9a0" stroke-width="1.5"/>
+            <circle cx="70" cy="57" r="2" fill="#e9bd6c"/><circle cx="103" cy="51" r="1.8" fill="#f0cf83"/>
+          </svg>
+          <div class="table-scene__surface"></div>
+        </div>
+        <div class="scene__content scene__content--dinner">
+          <p class="eyebrow" data-enter data-delay="250">uma noite italiana</p>
+          <h2 id="dinner-title" tabindex="-1" data-enter data-delay="800">Uma mesa para dois.</h2>
+          <p class="lede" data-enter data-delay="1550">Vinho, comida boa e conversa sem pressa.</p>
+          <button class="button button--quiet" type="button" data-next="goodbye" data-enter data-delay="2550">E quando a noite acabar... <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene scene--goodbye" id="goodbye" data-scene="goodbye" aria-labelledby="goodbye-title" hidden>
+        <div class="door-scene" aria-hidden="true">
+          <div class="goodbye-house">
+            <svg class="goodbye-house__art" viewBox="0 0 400 236" role="img" aria-label="Casa iluminada ao anoitecer">
+              <defs>
+                <linearGradient id="goodbye-wall" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#87806a"/>
+                  <stop offset="1" stop-color="#5c6257"/>
+                </linearGradient>
+                <linearGradient id="goodbye-roof" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#68483e"/>
+                  <stop offset="1" stop-color="#422f2d"/>
+                </linearGradient>
+                <linearGradient id="goodbye-window" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#ffe6a0"/>
+                  <stop offset="1" stop-color="#e9bd6b"/>
+                </linearGradient>
+                <clipPath id="goodbye-roof-clip"><path d="M20 101 200 10l180 91H20Z"/></clipPath>
+                <filter id="goodbye-window-glow" x="-80%" y="-80%" width="260%" height="260%">
+                  <feGaussianBlur stdDeviation="8"/>
+                </filter>
+              </defs>
+              <ellipse cx="200" cy="228" rx="170" ry="9" fill="#090c0d" opacity=".42"/>
+              <path d="M274 32h31v68h-31z" fill="#584139" stroke="#ad8b68" stroke-width="2"/>
+              <path d="M267 32h45v9h-45z" fill="#745447"/>
+              <rect x="52" y="91" width="296" height="121" fill="url(#goodbye-wall)" stroke="#b6a17c" stroke-width="2"/>
+              <g stroke="#d7c69b" stroke-width="1" opacity=".13">
+                <path d="M60 106h280M60 194h280"/>
+                <path d="M67 105v87m18-87v87m18-87v87m18-87v87m18-87v87m18-87v87m18-87v87m18-87v87m18-87v87m18-87v87m18-87v87m18-87v87m18-87v87m18-87v87"/>
+              </g>
+              <path d="M20 101 200 10l180 91H20Z" fill="url(#goodbye-roof)" stroke="#9b7055" stroke-width="2"/>
+              <g clip-path="url(#goodbye-roof-clip)" stroke="#c69a72" stroke-width="2" opacity=".22">
+                <path d="M20 44h360M20 60h360M20 76h360M20 92h360"/>
+                <path d="m90 26 4 16m31-31 4 16m31-16 4 16m31-16 4 16m31-16 4 16m31-16 4 16m31-16 4 16m31-16 4 16"/>
+              </g>
+              <path d="M24 101h352" stroke="#d1ad7f" stroke-width="5"/>
+              <g>
+                <rect x="77" y="119" width="67" height="61" rx="3" fill="#473d34" stroke="#d4bd91" stroke-width="3"/>
+                <rect x="85" y="127" width="51" height="45" fill="#ffe6a0" opacity=".32" filter="url(#goodbye-window-glow)"/>
+                <rect x="85" y="127" width="51" height="45" fill="url(#goodbye-window)" stroke="#f2db9f" stroke-width="2"/>
+                <path d="M110 127v45m-25-22h51" stroke="#7c6950" stroke-width="3"/>
+                <rect x="256" y="119" width="67" height="61" rx="3" fill="#473d34" stroke="#d4bd91" stroke-width="3"/>
+                <rect x="264" y="127" width="51" height="45" fill="#ffe6a0" opacity=".32" filter="url(#goodbye-window-glow)"/>
+                <rect x="264" y="127" width="51" height="45" fill="url(#goodbye-window)" stroke="#f2db9f" stroke-width="2"/>
+                <path d="M289 127v45m-25-22h51" stroke="#7c6950" stroke-width="3"/>
+              </g>
+              <path d="m148 143 52-25 52 25v8H148z" fill="#62473d" stroke="#c19a70" stroke-width="2"/>
+              <path d="M157 148v57m86-57v57" stroke="#d0b78a" stroke-width="6"/>
+              <rect x="168" y="143" width="64" height="69" fill="#46352f" stroke="#d0b78a" stroke-width="3"/>
+              <rect x="176" y="151" width="48" height="53" fill="#302725" stroke="#85694e" stroke-width="2"/>
+              <path d="M181 157h38v20h-38zm0 26h38v15h-38z" fill="none" stroke="#8d7457" stroke-width="2"/>
+              <circle cx="216" cy="181" r="3" fill="#f2d38a"/>
+              <path d="M45 212h310v8H45zm30 8h250v7H75z" fill="#6b5947" stroke="#b5966d" stroke-width="2"/>
+              <path d="M26 204q16-28 33-5 17-24 33 5v10H26zm282 0q16-28 33-5 17-24 33 5v10h-66z" fill="#34443c"/>
+            </svg>
+          </div>
+          <div class="goodbye-path"></div>
+          <div class="walkers"><i class="walker walker--her"></i><i class="walker walker--him"></i></div>
+        </div>
+        <div class="scene__content scene__content--goodbye">
+          <p class="eyebrow" data-enter data-delay="250">já está quase amanhecendo</p>
+          <h2 id="goodbye-title" tabindex="-1" data-enter data-delay="850">E o resto...</h2>
+          <p class="lede" data-enter data-delay="2100">...a gente deixa para descobrir <span data-date>amanhã</span>.</p>
+          <span class="wink" data-enter data-delay="2900" aria-label="piscadinha">😉</span>
+          <button class="button button--quiet" type="button" data-next="reveal" data-enter data-delay="3600">Acorda... <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene scene--reveal" id="reveal" data-scene="reveal" aria-labelledby="reveal-title" hidden>
+        <div class="scene__content">
+          <p class="eyebrow" data-enter data-delay="250">um detalhe importante</p>
+          <h2 id="reveal-title" tabindex="-1" data-enter data-delay="850">Mas espera...</h2>
+          <p class="lede" data-enter data-delay="1700">Isso não é só um sonho.</p>
+          <p class="reveal-word" data-enter data-delay="2600">É um convite para um date <span data-date>amanhã</span>.</p>
+          <button class="button button--gold" type="button" data-next="question" data-enter data-delay="3400">Então... <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="scene scene--question" id="question" data-scene="question" aria-labelledby="question-title" hidden>
+        <div class="scene__content">
+          <p class="eyebrow" data-enter data-delay="250">sem pressão. só um convite.</p>
+          <h2 id="question-title" tabindex="-1" data-enter data-delay="900">Você aceita sair<br>comigo <span data-date>amanhã</span>?</h2>
+          <div class="answer-actions" data-enter data-delay="1750">
+            <button class="button button--gold button--yes" id="yes-button" type="button">Sim <span aria-hidden="true">♥</span></button>
+            <button class="button button--no" id="no-button" type="button">Não</button>
+          </div>
+          <div class="answer-hint" id="no-hint" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="scene scene--answer" id="answer" data-scene="answer" aria-labelledby="answer-title" hidden>
+        <div class="celebration" id="celebration" aria-hidden="true"></div>
+        <div class="scene__content">
+          <p class="eyebrow" id="answer-eyebrow" data-enter data-delay="250">combinado</p>
+          <h2 id="answer-title" tabindex="-1" data-enter data-delay="850">❤️ Então está combinado.</h2>
+          <p class="lede" id="answer-copy" data-enter data-delay="1600">Eu cuido do resto. Até amanhã.</p>
+          <a class="button button--gold whatsapp-link" id="whatsapp-link" href="https://wa.me/?text=Sim" target="_blank" rel="noopener noreferrer" data-enter data-delay="2500">Enviar 😘<span aria-hidden="true">↗</span></a>
+          <!-- Sua resposta abre uma conversa no WhatsApp. -->
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
